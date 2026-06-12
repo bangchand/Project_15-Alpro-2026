@@ -12,7 +12,7 @@ enum TransactionType {
     SETOR,
     TARIK,
     PENJUALAN
-};
+}; 
 
 struct User {
     string id;

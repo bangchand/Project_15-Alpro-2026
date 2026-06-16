@@ -1,0 +1,40 @@
+# Project: Project
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = src/cart.o src/main.o src/transaction.o src/utils.o src/stocks.o
+LINKOBJ  = src/cart.o src/main.o src/transaction.o src/utils.o src/stocks.o
+LIBS     = -L"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/lib" -L"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/include" -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/include" -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"E:/Keperluan Sekretaris/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++" -I"C:/Users/User1/Project_15-Alpro-2026/include"
+BIN      = Project.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = E:\Keperluan Sekretaris\Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_Setup\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/cart.o: src/cart.cpp
+	$(CPP) -c src/cart.cpp -o src/cart.o $(CXXFLAGS)
+
+src/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/transaction.o: src/transaction.cpp
+	$(CPP) -c src/transaction.cpp -o src/transaction.o $(CXXFLAGS)
+
+src/utils.o: src/utils.cpp
+	$(CPP) -c src/utils.cpp -o src/utils.o $(CXXFLAGS)
+
+src/stocks.o: src/stocks.cpp
+	$(CPP) -c src/stocks.cpp -o src/stocks.o $(CXXFLAGS)

@@ -12,6 +12,7 @@ void Stokmenu(Product products[], int productCount){
 	cout << "1. Tambah Stok\n";
 	cout << "2. Kurangi Stok\n";
 	cout << "3. Lihat Semua Stok\n";
+	cout << "0. Kembali\n";
 	cout << "Pilih Opsi : ";
 	cin >> opsi;
 	
@@ -24,6 +25,8 @@ void Stokmenu(Product products[], int productCount){
 		continue;
 	}
 	switch (opsi){
+		case 0:
+			return;
 		case 1:
 			tambahStok(products, productCount);
 			break;

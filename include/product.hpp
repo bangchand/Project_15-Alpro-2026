@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+const int MAX_PRODUCT = 100;
+
 struct Product {
     std::string id;
     std::string name;

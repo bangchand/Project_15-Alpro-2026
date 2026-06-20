@@ -4,7 +4,7 @@
 
 using namespace std;
 
-extern const int MAX_CART;
+const int MAX_CART = 100;
 
 struct CartItem {
     string productId;

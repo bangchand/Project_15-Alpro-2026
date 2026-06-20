@@ -5,6 +5,8 @@
 
 using namespace std;
 
+const int MAX_TRANSACTION = 100;
+
 struct Transaction {
     string id;
     string cashierId;

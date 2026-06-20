@@ -3,25 +3,20 @@
 void tampilkanMenuKasirUI(string nama);
 
 int main() {
-    Akun dataPengguna[MAX_PENGGUNA] = {
-        {"admin1", "123", "Admin", "Neza Admin"},
-        {"kasir1", "456", "Kasir", "Alya Kasir"}
-    };
-    int jumlahPengguna = 2;
+    int jumlahPengguna = 0;
+    Akun dataPengguna[MAX_PENGGUNA];
+    muatDataAkun(dataPengguna, jumlahPengguna);
 
-    Product products[100];
-    int productCount = 2;
-    products[0] = Product{"BR001", "Indomie", 3500, 50};
-    products[1] = Product{"BR002", "Aqua", 4000, 30};
+    int productCount = 0;
+    Product products[MAX_PRODUCT];
     muatDataProduk(products, productCount);
 
-    Transaction transactions[100];
     int transactionCount = 0;
+    Transaction transactions[MAX_TRANSACTION];
     muatDataTransaksi(transactions, transactionCount);
 
     Kas cash;
     muatDataKas(&cash);
-    muatDataAkun(dataPengguna, jumlahPengguna);
 
     Akun userAktif;
 

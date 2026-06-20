@@ -2,8 +2,6 @@
 
 void headerKeranjangUI();
 
-const int MAX_CART = 50;
-
 void CartItem::setItem(Product* product, int qty) {
     productId = product->id;
     productName = product->name;

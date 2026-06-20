@@ -110,6 +110,7 @@ void checkout(
     transactionCount++;
     
     simpanDataTransaksi(transactions, transactionCount);
+    simpanDataProduk(products, productCount);
 
     cout << GREEN << "\n[+] Transaksi berhasil!\n" << RESET;
     cout << "Kembalian Anda: Rp " << trx.change << "\n";

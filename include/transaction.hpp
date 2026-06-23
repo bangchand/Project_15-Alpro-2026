@@ -1,3 +1,4 @@
+#pragma once
 #include "product.hpp"
 #include "cart.hpp"
 #include "utils.hpp"

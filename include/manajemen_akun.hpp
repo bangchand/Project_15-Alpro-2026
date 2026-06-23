@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "product.hpp"
+#include "transaction.hpp"
 
 const int MAX_PENGGUNA = 100;
 
@@ -22,5 +23,5 @@ bool editAkunKasir(Akun dataPengguna[], int jumlahPengguna, std::string username
 bool hapusAkunKasir(Akun dataPengguna[], int &jumlahPengguna, std::string usernameTarget);
 
 std::string prosesLogin(Akun &userAktif, Akun dataPengguna[], int jumlahPengguna);
-void menuAdmin(Akun adminAktif, Product products[], int& productCount, Akun dataPengguna[], int& jumlahPengguna);
+void menuAdmin(Akun adminAktif, Product products[], int& productCount, Akun dataPengguna[], int& jumlahPengguna, Transaction transactions[], int transactionCount);
 void menuManajemenAkun(Akun dataPengguna[], int &jumlahPengguna);

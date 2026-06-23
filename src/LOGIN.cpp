@@ -34,13 +34,13 @@ string prosesLogin(Akun &userAktif, Akun dataPengguna[], int jumlahPengguna) {
     return "Gagal"; 
 }
 
-void menuAdmin(Akun adminAktif, Product products[], int& productCount, Akun dataPengguna[], int& jumlahPengguna) {
+void menuAdmin(Akun adminAktif, Product products[], int& productCount, Akun dataPengguna[], int& jumlahPengguna, Transaction transactions[], int transactionCount) {
     bool sesiAktif = true;
     while (sesiAktif) {
         bersihkanLayar();
         tampilkanMenuAdminUI(adminAktif.nama);
         
-        int pilihanInt = inputChoice(0, 3);
+        int pilihanInt = inputChoice(0, 4);
         string pilihan = to_string(pilihanInt);
 
         if (pilihan == "1") {
@@ -51,6 +51,9 @@ void menuAdmin(Akun adminAktif, Product products[], int& productCount, Akun data
         }
         else if (pilihan == "3") {
             Stokmenu(products, productCount);
+        }
+        else if (pilihan == "4") {
+            tampilkanMenuLaporan(transactions, transactionCount);
         }
         else if (pilihan == "0") {
             cout << GREEN << "\n[+] Anda berhasil logout dari Admin.\n" << RESET;
@@ -75,6 +78,7 @@ void tampilkanMenuAdminUI(string nama) {
     cout << "  [1] Manajemen Akun\n";
     cout << "  [2] Manajemen Produk\n";
     cout << "  [3] Manajemen Stok\n";
+    cout << "  [4] Laporan\n";
     cout << "  [0] Logout\n";
     cout << "-----------------------------------------\n";
 }

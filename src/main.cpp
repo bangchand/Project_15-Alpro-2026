@@ -27,7 +27,7 @@ int main() {
             break;
         } 
         else if (role == "Admin") {
-            menuAdmin(userAktif, products, productCount, dataPengguna, jumlahPengguna);
+            menuAdmin(userAktif, products, productCount, dataPengguna, jumlahPengguna, transactions, transactionCount);
         } 
         else if (role == "Kasir") {
             string cashierId = userAktif.username;
